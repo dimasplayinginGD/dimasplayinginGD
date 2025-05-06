@@ -2,3 +2,9 @@ div {
     border-top: black solid 5px;
     border-bottom: black solid 5px;
 }
+
+h5,button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
