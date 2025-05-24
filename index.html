@@ -52,38 +52,7 @@
         text-decoration:none
         }
     </style>
-    <script>
-const deleteButton = document.getElementById('deleteSectionButton');
-const sectionToDelete = document.getElementById('sectionToDelete');
-let pageVisits = 0;
-
-// Функция для отслеживания посещения страниц
-function trackPageVisit() {
-  if (pageVisits < 2) {
-    pageVisits++;
-    console.log(`Страница посещена ${pageVisits} раз(а)`);
-  }
-
-  if (pageVisits === 2) {
-    deleteButton.disabled = false;
-    console.log('Кнопка активирована');
-  }
-}
-
-// Запускаем функцию при загрузке страницы
-trackPageVisit();
-
-// Функция удаления раздела
-function deleteSection() {
-  sectionToDelete.remove(); // Удаляем весь раздел
-  console.log('Раздел удален');
-  deleteButton.disabled = true; // Деактивируем кнопку
-  console.log('Кнопка деактивирована');
-}
-
-// Обработчик клика на кнопку
-deleteButton.addEventListener('click', deleteSection);
-</script>
+   
 </head>
 <body>
 
@@ -131,4 +100,36 @@ deleteButton.addEventListener('click', deleteSection);
   <p>Текст раздела</p>
 </div>
     </footer>
+     <script>
+const deleteButton = document.getElementById('deleteSectionButton');
+const sectionToDelete = document.getElementById('sectionToDelete');
+let pageVisits = 0;
+
+// Функция для отслеживания посещения страниц
+function trackPageVisit() {
+  if (pageVisits < 2) {
+    pageVisits++;
+    console.log(`Страница посещена ${pageVisits} раз(а)`);
+  }
+
+  if (pageVisits === 2) {
+    deleteButton.disabled = false;
+    console.log('Кнопка активирована');
+  }
+}
+
+// Запускаем функцию при загрузке страницы
+trackPageVisit();
+
+// Функция удаления раздела
+function deleteSection() {
+  sectionToDelete.remove(); // Удаляем весь раздел
+  console.log('Раздел удален');
+  deleteButton.disabled = true; // Деактивируем кнопку
+  console.log('Кнопка деактивирована');
+}
+
+// Обработчик клика на кнопку
+deleteButton.addEventListener('click', deleteSection);
+</script>
 </html>
